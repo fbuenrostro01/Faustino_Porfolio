@@ -128,7 +128,7 @@ button:hover {
 
 /* Portfolio Items - Enhanced Styling */
 .portfolio-item {
-    background-color: #333; /* Dark background for cards to match theme */
+    background-color: #780f0f; /* Dark background for cards to match theme */
     padding: 20px; /* Add padding to create space inside the card */
     border-radius: 10px; /* Rounded corners for a softer look */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Subtle shadow for a lifted effect */
