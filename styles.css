@@ -1,0 +1,374 @@
+/* General Styling */
+body {
+    background-color: #111;
+    color: #fff;
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+/* Container for Intro and Profile Image */
+.container {
+    display: flex;
+    flex-direction: column; /* Default for mobile */
+    align-items: center; /* Center align items for mobile */
+    padding: 20px;
+    gap: 20px; /* Space between intro and profile image */
+}
+
+/* Adjust layout for larger screens */
+@media (min-width: 769px) {
+    .container {
+        flex-direction: row; /* Align intro and profile side by side */
+        justify-content: space-between; /* Space between text and image */
+        align-items: center; /* Center items vertically */
+        padding: 40px;
+    }
+
+    .intro {
+        max-width: 45%; /* Ensure intro text takes up an appropriate width */
+        text-align: left; /* Align text to the left for larger screens */
+    }
+
+    .profile-image {
+        max-width: 45%; /* Ensure profile image takes up an appropriate width */
+        margin-left: 40px; /* Space between text and profile image */
+    }
+}
+
+.intro {
+    text-align: center; /* Center text for mobile devices */
+    animation: fadeIn 1s ease-in-out;
+}
+
+.intro h1 {
+    font-size: 3rem;
+    line-height: 1.2;
+    text-align: left; /* Align title to the left for larger screens */
+}
+
+.intro p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    text-align: left; /* Align paragraph text to the left for larger screens */
+    margin: 20px 0; /* Add margin to give space between elements */
+}
+
+button {
+    background-color: #fff;
+    color: #111;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px; /* Rounded corners */
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+button:hover {
+    background-color: #e0e0e0; /* Button hover effect */
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.2);
+}
+
+/* Profile Image */
+.profile-image {
+    width: 350px; /* Set width for the container */
+    height: 450px; /* Set height for the container */
+    overflow: hidden; /* Hide overflow to crop image */
+    border-radius: 40%; /* Create an oval effect */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6); /* Add shadow to give depth */
+    animation: fadeIn 1s ease-in-out;
+}
+
+.profile-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Maintain aspect ratio, fill the container without distortion */
+}
+
+/* Social Links */
+.social-links {
+    text-align: center;
+    margin: 20px 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.social-links a img {
+    width: 40px;
+    height: 40px;
+    transition: transform 0.3s ease;
+}
+
+.social-links a img:hover {
+    transform: scale(1.1);
+}
+
+/* Portfolio and Skills Section */
+.portfolio-skills {
+    padding: 60px;
+    text-align: center;
+    background: linear-gradient(135deg, #1c1c1c, #333); /* Gradient for visual interest */
+    animation: fadeIn 1s ease-in-out;
+    border-top: 1px solid #444; /* Divider line to separate sections */
+}
+
+.portfolio h2 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+}
+
+.portfolio-links {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap; /* Allow portfolio items to wrap to the next line */
+}
+
+/* Portfolio Items - Enhanced Styling */
+.portfolio-item {
+    background-color: #333; /* Dark background for cards to match theme */
+    padding: 20px; /* Add padding to create space inside the card */
+    border-radius: 10px; /* Rounded corners for a softer look */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Subtle shadow for a lifted effect */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Add animation for a hover effect */
+    margin-bottom: 30px; /* Add space between portfolio items */
+    width: 300px;
+}
+
+.portfolio-item:hover {
+    transform: translateY(-10px); /* Lift the card when hovered */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5); /* Darker shadow on hover */
+}
+
+.portfolio-button {
+    background-color: #444;
+    color: #fff;
+    padding: 10px 15px;
+    border: none;
+    text-decoration: none;
+    font-size: 1rem;
+    border-radius: 5px;
+    display: inline-block;
+    margin-bottom: 10px; /* Space between button and description */
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Add hover animation */
+}
+
+.portfolio-button:hover {
+    background-color: #666;
+    transform: scale(1.05); /* Slightly grow the button when hovered */
+}
+
+.portfolio-description {
+    font-size: 1rem;
+    color: #ccc; /* Lighter color for better readability against dark background */
+    max-width: 600px; /* Limit width to keep text tidy */
+    margin: 0 auto; /* Center the text within the card */
+    text-align: center; /* Keep it centered for a uniform look */
+}
+
+/* Skills List */
+.skills-list {
+    list-style: none;
+    padding: 0;
+    font-size: 1.2rem;
+    display: flex;
+    flex-wrap: wrap; /* Allow wrapping of items */
+    justify-content: center; /* Center align the skills list */
+    gap: 20px; /* Add space between skills */
+}
+
+.skills-list li {
+    margin: 10px;
+    display: flex; /* Align icon and text horizontally */
+    align-items: center; /* Center the icon vertically */
+    background-color: #333; /* Add background to skills */
+    padding: 10px;
+    border-radius: 8px; /* Rounded corners for a better look */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4); /* Subtle shadow */
+}
+
+.skill-icon {
+    width: 50px; /* Increased size for the icons */
+    height: 50px; /* Increased size for the icons */
+    margin-right: 10px;
+}
+
+/* Footer Styling */
+footer {
+    background-color: #111;
+    padding: 20px;
+    text-align: center;
+    border-top: 1px solid #444;
+    color: #777;
+}
+
+footer p {
+    margin: 0;
+}
+
+/* Scroll Animations */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column; /* Ensure column direction on mobile */
+        padding: 20px;
+    }
+
+    .intro h1 {
+        font-size: 2.5rem;
+    }
+
+    .intro p {
+        font-size: 1rem;
+        max-width: 90%; /* Full width for mobile */
+        text-align: center; /* Center-align paragraph text on smaller screens */
+    }
+
+    .profile-image {
+        width: 250px; /* Adjust container size for mobile */
+        height: auto; /* Adjust container height for mobile */
+    }
+
+    .portfolio-button {
+        padding: 8px 12px;
+    }
+
+    .social-links img {
+        width: 35px; /* Adjust social icon size for mobile */
+        height: 35px;
+    }
+
+    .skills-list li {
+        margin: 5px 10px; /* Reduce space between items for mobile */
+    }
+
+    .skill-icon {
+        width: 40px; /* Slightly smaller icons for mobile */
+        height: 40px; /* Maintain proportions for smaller screens */
+    }
+}
+
+/* Light Mode (default) */
+:root {
+    --background-color: #fff;
+    --text-color: #111;
+    --button-bg-color: #333;
+    --button-text-color: #fff;
+    --card-bg-color: #f4f4f4;
+    --shadow-color: rgba(0, 0, 0, 0.2);
+}
+
+/* Dark Mode */
+body.dark-mode {
+    --background-color: #111;
+    --text-color: #fff;
+    --button-bg-color: #444;
+    --button-text-color: #fff;
+    --card-bg-color: #333;
+    --shadow-color: rgba(0, 0, 0, 0.6);
+}
+
+/* General Styling */
+body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+button {
+    background-color: var(--button-bg-color);
+    color: var(--button-text-color);
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Portfolio Items */
+.portfolio-item {
+    background-color: var(--card-bg-color);
+    box-shadow: 0 4px 8px var(--shadow-color);
+}
+
+/* Light Mode (default) */
+:root {
+    --background-color: #fff;
+    --text-color: #111;
+    --button-bg-color: #333;
+    --button-text-color: #fff;
+    --button-bg-color-active: #666; /* Color for the toggle button in dark mode */
+    --card-bg-color: #f4f4f4;
+    --shadow-color: rgba(0, 0, 0, 0.2);
+}
+
+/* Dark Mode */
+body.dark-mode {
+    --background-color: #111;
+    --text-color: #fff;
+    --button-bg-color: #444;
+    --button-text-color: #fff;
+    --button-bg-color-active: #888; /* Different color for dark mode toggle button */
+    --card-bg-color: #333;
+    --shadow-color: rgba(0, 0, 0, 0.6);
+}
+
+/* General Styling */
+body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+/* Dark Mode Toggle Button Styling */
+#dark-mode-toggle {
+    background-color: var(--button-bg-color);
+    color: var(--button-text-color);
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    position: fixed; /* Make it always available */
+    top: 20px;
+    right: 20px;
+    z-index: 1000;
+}
+
+/* Button when in Dark Mode */
+body.dark-mode #dark-mode-toggle {
+    background-color: var(--button-bg-color-active);
+}
+
+/* Button Hover Effect */
+#dark-mode-toggle:hover {
+    background-color: #555; /* Hover effect for the button */
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.2);
+}
+
+/* Portfolio Items */
+.portfolio-item {
+    background-color: var(--card-bg-color);
+    box-shadow: 0 4px 8px var(--shadow-color);
+}
+
+
